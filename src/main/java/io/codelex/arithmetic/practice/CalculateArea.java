@@ -3,7 +3,7 @@ package io.codelex.arithmetic.practice;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-import static java.math.BigDecimal.ZERO;
+//import static java.math.BigDecimal.ZERO;
 
 public class CalculateArea {
     public static void main(String[] args) {
@@ -55,22 +55,21 @@ public class CalculateArea {
 
     public static void calculateCircleArea() {
 
-        BigDecimal radius = ZERO;
 
         // Get input from user
         Scanner keyboard = new Scanner(System.in);
         System.out.print("What is the circle's radius? ");
         //todo
-        //radius = keyboard.nextDouble();
+         double radius = keyboard.nextDouble();
+
+        double Area= Math.PI * Math.pow(radius,2);
 
         // Display output
         System.out.println("The circle's area is "
-                + Geometry.areaOfCircle(radius));
+                + Area);
     }
 
     public static void calculateRectangleArea() {
-        BigDecimal length = ZERO;
-        BigDecimal width = ZERO;
 
         // Get input from user
         Scanner keyboard = new Scanner(System.in);
@@ -78,21 +77,22 @@ public class CalculateArea {
         // Get length
         System.out.print("Enter length? ");
         //todo
-        //length = keyboard.nextDouble();
+        double length = keyboard.nextDouble();
 
         // Get width
         System.out.print("Enter width? ");
         //todo
-        //width = keyboard.nextDouble();
+        double width = keyboard.nextDouble();
+        double area = length * width;
 
         // Display output
         System.out.println("The rectangle's area is "
-                + Geometry.areaOfRectangle(length, width));
+                + area);
+
     }
 
     public static void calculateTriangleArea() {
-        BigDecimal base = ZERO;
-        BigDecimal height = ZERO;
+
 
         // Get input from user
         Scanner keyboard = new Scanner(System.in);
@@ -100,15 +100,16 @@ public class CalculateArea {
         // Get the base
         System.out.print("Enter length of the triangle's base? ");
         //todo
-        //base = keyboard.nextDouble();
+        double base = keyboard.nextDouble();
 
         // Get the height
         System.out.print("Enter triangle's height? ");
         //todo
-        //height = keyboard.nextDouble();
+        double height = keyboard.nextDouble();
+        double Area = base * height * 0.5;
 
         // Display the triangle's area.
         System.out.println("The triangle's area is "
-                + Geometry.areaOfTriangle(base, height));
+                + Area);
     }
 }
