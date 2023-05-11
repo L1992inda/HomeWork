@@ -20,10 +20,13 @@ public class RandomNumberPositions {
         boolean foundIt = false;
 
         for (i = 0; i < integers.length; i++) {
+            if(searchFor == i){
+                break;
+            }
             //todo - search for integer - break when you have found what you searched for
         }
 
-        if (foundIt) {
+        if (!foundIt) {
             System.out.println("Found " + searchFor + " at index " + i);
         } else {
             System.out.println(searchFor + " is not in the array");
