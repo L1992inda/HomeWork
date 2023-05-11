@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MultiplyByItself {
 
     public static void main(String[] args) {
-        int i, n;
+        int i = 0, n;
 
         System.out.print("Input number of terms : ");
         Scanner in = new Scanner(System.in);
@@ -17,6 +17,10 @@ public class MultiplyByItself {
           System.out.println(........);
         }
         */
+        for (i = 1; i < n; i++) {
+            System.out.print(i*= i);
+        }
+
     }
 
 }
