@@ -60,13 +60,13 @@ public class CalculateArea {
         Scanner keyboard = new Scanner(System.in);
         System.out.print("What is the circle's radius? ");
         //todo
-         double radius = keyboard.nextDouble();
+        double radius = keyboard.nextDouble();
 
-        double Area= Math.PI * Math.pow(radius,2);
+        double area = Math.PI * Math.pow(radius, 2);
 
         // Display output
         System.out.println("The circle's area is "
-                + Area);
+                + area);
     }
 
     public static void calculateRectangleArea() {
@@ -106,10 +106,10 @@ public class CalculateArea {
         System.out.print("Enter triangle's height? ");
         //todo
         double height = keyboard.nextDouble();
-        double Area = base * height * 0.5;
+        double area = base * height * 0.5;
 
         // Display the triangle's area.
         System.out.println("The triangle's area is "
-                + Area);
+                + area);
     }
 }

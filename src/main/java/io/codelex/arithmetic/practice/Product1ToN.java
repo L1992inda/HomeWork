@@ -10,6 +10,6 @@ public class Product1ToN {
         for (int i = a; i <= b; ++i) {
             sum += i;
         }
-        System.out.println("Factorial of number " +b+" is: "+sum);
+        System.out.println("Factorial of number " + b + " is: " + sum);
     }
 }

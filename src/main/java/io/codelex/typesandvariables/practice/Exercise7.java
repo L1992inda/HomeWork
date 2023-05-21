@@ -7,15 +7,15 @@ public class Exercise7 {
 
         Scanner input = new Scanner(System.in);
         System.out.print("Write string: ");
-        String UserString = input.nextLine();
-        int UpperCase = 0;
-        for (int i = 0; i <UserString.length(); i++) {
-            char chart = UserString.charAt(i);
-            if(Character.isUpperCase(chart)){
-                UpperCase++;
+        String userString = input.nextLine();
+        int upperCase = 0;
+        for (int i = 0; i < userString.length(); i++) {
+            char chart = userString.charAt(i);
+            if (Character.isUpperCase(chart)) {
+                upperCase++;
             }
 
         }
-        System.out.print("Uppercase used: " + UpperCase);
+        System.out.print("Uppercase used: " + upperCase);
     }
 }

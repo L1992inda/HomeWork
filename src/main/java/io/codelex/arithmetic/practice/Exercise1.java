@@ -6,18 +6,19 @@ public class Exercise1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter number A: ");
-        int A = input.nextInt();
+        int a = input.nextInt();
         System.out.print("Enter number B: ");
-        int B = input.nextInt();
-        System.out.print("Number sum: " + num(A,B));
+        int b = input.nextInt();
+        System.out.print("Number sum: " + num(a, b));
 
     }
-    public static boolean num (int A, int B)
-    {
-        if(A == 15 || B == 15){
-            return true;}
 
-        return (A+B == 15 || A - B == 15);
+    public static boolean num(int a, int b) {
+        if (a == 15 || b == 15) {
+            return true;
+        }
+
+        return (a + b == 15 || a - b == 15);
     }
-    }
+}
 

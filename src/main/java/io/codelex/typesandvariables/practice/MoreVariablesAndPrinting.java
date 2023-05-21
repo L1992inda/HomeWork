@@ -2,31 +2,31 @@ package io.codelex.typesandvariables.practice;
 
 public class MoreVariablesAndPrinting {
     public static void main(String[] args) {
-        String Name, Eyes, Teeth, Hair;
-        int Age, HeightInches, WeightLbs;
-        double InchCm,HeightToCm,LbsKg,WeightToKg;
+        String name, eyes, teeth, hair;
+        int age, heightInches, weightLbs;
+        double inchCm, heightToCm, lbsKg, weightToKg;
 
-        Name = "Zed A. Shaw";
-        Age = 35;
-        HeightInches = 74;
-        WeightLbs = 180;
-        Eyes = "Blue";
-        Teeth = "White";
-        Hair = "Brown";
-        InchCm = 2.54f;
-        HeightToCm = HeightInches * InchCm;
-        LbsKg = 0.453592d;
-        WeightToKg = WeightLbs*LbsKg;
+        name = "Zed A. Shaw";
+        age = 35;
+        heightInches = 74;
+        weightLbs = 180;
+        eyes = "Blue";
+        teeth = "White";
+        hair = "Brown";
+        inchCm = 2.54f;
+        heightToCm = heightInches * inchCm;
+        lbsKg = 0.453592d;
+        weightToKg = weightLbs * lbsKg;
 
 
-        System.out.println("Let's talk about " + Name + ".");
-        System.out.println("He's " + HeightToCm + " inches tall.");
-        System.out.println("He's " + WeightToKg + " pounds heavy.");
+        System.out.println("Let's talk about " + name + ".");
+        System.out.println("He's " + heightToCm + " inches tall.");
+        System.out.println("He's " + weightToKg + " pounds heavy.");
         System.out.println("Actually, that's not too heavy.");
-        System.out.println("He's got " + Eyes + " eyes and " + Hair + " hair.");
-        System.out.println("His teeth are usually " + Teeth + " depending on the coffee.");
+        System.out.println("He's got " + eyes + " eyes and " + hair + " hair.");
+        System.out.println("His teeth are usually " + teeth + " depending on the coffee.");
 
-        System.out.println("If I add " + Age + ", " + HeightToCm + ", and " + WeightToKg
-                + " I get " + (Age + HeightToCm + WeightToKg) + ".");
+        System.out.println("If I add " + age + ", " + heightToCm + ", and " + weightToKg
+                + " I get " + (age + heightToCm + weightToKg) + ".");
     }
 }

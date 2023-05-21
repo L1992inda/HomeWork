@@ -3,19 +3,19 @@ package io.codelex.typesandvariables.practice;
 public class VariablesAndNames {
     public static void main(String[] args) {
 
-        int Cars = 100;
-        int CarSeats = 4;
-        int Drivers = 30;
-        int Passengers = 90;
-        int CarsNotDriven = Cars - Drivers;
-        int CarpoolCapacity = Drivers * CarSeats;
-        int CarAveragePassenger = Passengers / Drivers;
+        int cars = 100;
+        int carSeats = 4;
+        int drivers = 30;
+        int passengers = 90;
+        int carsNotDriven = cars - drivers;
+        int carpoolCapacity = drivers * carSeats;
+        int carAveragePassenger = passengers / drivers;
 
-        System.out.println("There are " + Cars + " cars available.");
-        System.out.println("There are only " + Drivers + " drivers available.");
-        System.out.println("There will be " + CarsNotDriven + " empty cars today.");
-        System.out.println("We can transport " + CarpoolCapacity + " people today.");
-        System.out.println("We have " + Passengers + " to carpool today.");
-        System.out.println("We need to put about " + CarAveragePassenger + " in each car.");
+        System.out.println("There are " + cars + " cars available.");
+        System.out.println("There are only " + drivers + " drivers available.");
+        System.out.println("There will be " + carsNotDriven + " empty cars today.");
+        System.out.println("We can transport " + carpoolCapacity + " people today.");
+        System.out.println("We have " + passengers + " to carpool today.");
+        System.out.println("We need to put about " + carAveragePassenger + " in each car.");
     }
 }
