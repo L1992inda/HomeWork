@@ -6,6 +6,8 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FlightPlanner {
     private static final Charset charset = Charset.defaultCharset();
@@ -13,6 +15,11 @@ public class FlightPlanner {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         final Path path = Paths.get(Histogram.class.getResource(file).toURI());
-        Files.readAllLines(path, charset);
+
+        List<String> flightPlan = Files.readAllLines(path, charset);
+        for (String i : flightPlan) {
+            System.out.println(i);
+
+        }
     }
 }

@@ -14,10 +14,12 @@ public class ArrayListExercise3 {
         colors.add("Orange");
         colors.add("White");
         colors.add("Black");
+        colors.add(1, "Gold");
         System.out.println(colors);
 
         //TODO: Add new color at the first and third position of the list
-
+        colors.add(1, "Yellow");
+        colors.add(3, "Blue");
         //Print the list
         System.out.println(colors);
     }
