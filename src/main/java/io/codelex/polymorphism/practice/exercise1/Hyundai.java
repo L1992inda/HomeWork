@@ -1,8 +1,8 @@
 package io.codelex.polymorphism.practice.exercise1;
 
-public class Lexus implements Car, CarExtraBoost {
-
+public class Hyundai implements Car, CarExtraBoost {
     private Integer currentSpeed = 0;
+
 
     public void speedUp() {
         currentSpeed += 8;
@@ -16,13 +16,13 @@ public class Lexus implements Car, CarExtraBoost {
         return currentSpeed.toString();
     }
 
-
-    public void useNitrousOxideEngine() {
-        currentSpeed = currentSpeed + 30;
-    }
-
     public Integer getCurrentSpeed() {
         return currentSpeed;
     }
-}
 
+    public void useNitrousOxideEngine() {
+        currentSpeed = currentSpeed + 20;
+    }
+
+
+}
