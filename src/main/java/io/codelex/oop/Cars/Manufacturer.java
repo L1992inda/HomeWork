@@ -9,12 +9,6 @@ public class Manufacturer {
         this.name = name;
         this.yearOfEstablishment = yearOfEstablishment;
         this.country = country;
-
-    }
-
-    public Manufacturer(String name) {
-        this.name = name;
-
     }
 
     public String getName() {
@@ -39,15 +33,4 @@ public class Manufacturer {
 
     public void setCountry(String country) {
         this.country = country;
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-}
+    }}

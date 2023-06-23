@@ -1,23 +1,27 @@
 package io.codelex.oop.Cars;
+import java.math.BigDecimal;
 
-import java.util.ArrayList;
 
 public class Car {
-    EngineType type;
-    private final ArrayList<Manufacturer> manufacturers;
     private String name;
     private String model;
-    private double price;
+    private BigDecimal price;
     private int yearOfManufacture;
+    private Manufacturer manufacturer;
+    private EngineType engineType;
 
-    public Car(String name, String model, double price, int yearOfManufacture, ArrayList<Manufacturer> manufacturers, EngineType type) {
+
+    enum EngineType {
+        V12, V8, V6, S6, S4, S3
+    }
+
+    public Car(String name, String model, double price, int yearOfManufacture, Manufacturer manufacturer, EngineType engineType) {
         this.name = name;
-        this.manufacturers = manufacturers;
         this.model = model;
-        this.price = price;
+        this.price = BigDecimal.valueOf(price);
         this.yearOfManufacture = yearOfManufacture;
-        this.type = type;
-
+        this.manufacturer = manufacturer;
+        this.engineType = engineType;
     }
 
     public String getName() {
@@ -36,11 +40,11 @@ public class Car {
         this.model = model;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -52,16 +56,22 @@ public class Car {
         this.yearOfManufacture = yearOfManufacture;
     }
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
+    public Manufacturer getManufacturer() {
+        return manufacturer;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
     }
+
+    public EngineType getEngineType() {
+        return engineType;
+    }
+
+    public void setEngineType(EngineType engineType) {
+        this.engineType = engineType;
+    }
+
 
 }
-
 
