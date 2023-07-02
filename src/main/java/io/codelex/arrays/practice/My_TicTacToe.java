@@ -4,171 +4,101 @@ import java.util.Scanner;
 
 public class My_TicTacToe {
 
-    private final static String playerX = "X";
-    private final static String playerO = "O";
-    private final static String[][] table = new String[3][3];
+    private static char[][] board = new char[3][3];
+    private static char currentPlayerSymbol = 'X';
 
     public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
 
-        emptyBoard();
+        initBoard();
+        displayBoard();
 
-        while (true) {
-            notEquals();
-            player1();
+        boolean gameFinished = false;
 
-            if (table[0][0].equals(playerX) && table[0][1].equals(playerX) && table[0][2].equals(playerX)) {
-                break; //System.out.println("You Win!");
+        while (!gameFinished) {
+            System.out.print("Player " + currentPlayerSymbol + ", enter your move (row[0-2] column[0-2]): ");
+            int row = keyboard.nextInt();
+            int col = keyboard.nextInt();
 
-            } else if (table[1][0].equals(playerX) && table[1][1].equals(playerX) && table[1][2].equals(playerX)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[2][0].equals(playerX) && table[2][1].equals(playerX) && table[2][2].equals(playerX)) {
-                System.out.println("You Win!");
-                break;
-            }
-            if (table[0][0].equals(playerX) && table[1][0].equals(playerX) && table[2][0].equals(playerX)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[0][1].equals(playerX) && table[1][1].equals(playerX) && table[2][1].equals(playerX)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[0][2].equals(playerX) && table[1][2].equals(playerX) && table[2][2].equals(playerX)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[0][0].equals(playerX) && table[1][1].equals(playerX) && table[2][2].equals(playerX)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[0][2].equals(playerX) && table[1][1].equals(playerX) && table[2][0].equals(playerX)) {
-                System.out.println("You Win!");
-                break;
-            }
+            if (isValidMove(row, col)) {
+                makeMove(row, col);
+                displayBoard();
 
-            notEquals();
-
-            player2();
-
-            if (table[0][0].equals(playerO) && table[0][1].equals(playerO) && table[0][2].equals(playerO)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[1][0].equals(playerO) && table[1][1].equals(playerO) && table[1][2].equals(playerO)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[2][0].equals(playerO) && table[2][1].equals(playerO) && table[2][2].equals(playerO)) {
-                System.out.println("You Win!");
-                break;
-            }
-            if (table[0][0].equals(playerO) && table[1][0].equals(playerO) && table[2][0].equals(playerO)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[0][1].equals(playerO) && table[1][1].equals(playerO) && table[2][1].equals(playerO)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[0][2].equals(playerO) && table[1][2].equals(playerO) && table[2][2].equals(playerO)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[0][0].equals(playerO) && table[1][1].equals(playerO) && table[2][2].equals(playerO)) {
-                System.out.println("You Win!");
-                break;
-            } else if (table[0][2].equals(playerO) && table[1][1].equals(playerO) && table[2][0].equals(playerO)) {
-                System.out.println("You Win!");
-                break;
-            }
-        }
-    }
-
-    public static void emptyBoard() {
-
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                table[i][j] = " _ ";
-            }
-        }
-
-        for (int i = 0; i < 3; i++) {
-            System.out.print(" | ");
-            for (int j = 0; j < 3; j++) {
-                System.out.print(table[i][j]);
-                System.out.print(" | ");
-            }
-            System.out.println();
-
-        }
-    }
-
-    public static void notEquals() {
-        while (true) {
-            if (table[0][0] != " _ " && table[0][1] != " _ " && table[0][2] != " _ " &&
-                    table[1][0] != " _ " && table[1][1] != " _ " && table[1][2] != " _ " &&
-                    table[2][0] != " _ " && table[2][1] != " _ " && table[2][2] != " _ ") {
-                System.out.println("Game Over!");
-            }
-            break;
-        }
-    }
-
-    public static void player1() {
-        while (true) {
-
-            Scanner input = new Scanner(System.in);
-
-            System.out.println("Player 'X' turn!");
-            System.out.print("'X', choose your row (1-3):");
-            int row = input.nextInt();
-
-            System.out.print("'X', choose your column (1-3):");
-            int column = input.nextInt();
-
-            if (table[row - 1][column - 1].equals(" _ ")) {
-
-                table[row - 1][column - 1] = " " + playerX + " ";
-            } else {
-                System.out.print("Busy!");
-                continue;
-            }
-
-            for (int i = 0; i < 3; i++) {
-                System.out.print(" | ");
-                for (int j = 0; j < 3; j++) {
-                    System.out.print(table[i][j]);
-                    System.out.print(" | ");
+                if (checkWin()) {
+                    System.out.println("Player " + currentPlayerSymbol + " wins! Game Over.");
+                    gameFinished = true;
+                } else if (isBoardFull()) {
+                    System.out.println("It's a tie! Game Over.");
+                    gameFinished = true;
+                } else {
+                    switchPlayer();
                 }
-                System.out.println();
+            } else {
+                System.out.println("Invalid move! Please try again.");
             }
-            break;
         }
 
+        keyboard.close();
     }
 
-    public static void player2() {
-        while (true) {
+    public static void initBoard() {
 
-            Scanner input = new Scanner(System.in);
+        for (int r = 0; r < 3; r++)
+            for (int c = 0; c < 3; c++)
+                board[r][c] = ' ';
+    }
+    public static void displayBoard() {
+        System.out.println("  0  " + board[0][0] + "|" + board[0][1] + "|" + board[0][2]);
+        System.out.println("    --+-+--");
+        System.out.println("  1  " + board[1][0] + "|" + board[1][1] + "|" + board[1][2]);
+        System.out.println("    --+-+--");
+        System.out.println("  2  " + board[2][0] + "|" + board[2][1] + "|" + board[2][2]);
+        System.out.println("     0 1 2 ");
+    }
 
-            System.out.println("Player 'O' turn!");
-            System.out.print("'O', choose your row (1-3):");
-            int row = input.nextInt();
-
-            System.out.print("'O', choose your column (1-3):");
-            int column = input.nextInt();
-
-            if (table[row - 1][column - 1].equals(" _ ")) {
-
-                table[row - 1][column - 1] = " " + playerO + " ";
-            } else {
-                System.out.println("Busy!");
-                continue;
-            }
-
-            for (int i = 0; i < 3; i++) {
-                System.out.print(" | ");
-                for (int j = 0; j < 3; j++) {
-                    System.out.print(table[i][j]);
-                    System.out.print(" | ");
-                }
-                System.out.println();
-
-            }
-            break;
+    public static boolean isValidMove(int row, int col) {
+        if (row < 0 || row >= 3 || col < 0 || col >= 3) {
+            return false;
         }
+
+        return board[row][col] == ' ';
+    }
+
+    public static void makeMove(int row, int col) {
+        board[row][col] = currentPlayerSymbol;
+    }
+
+    public static boolean checkWin() {
+        for (int i = 0; i < 3; i++) {
+            if (board[i][0] == currentPlayerSymbol && board[i][1] == currentPlayerSymbol && board[i][2] == currentPlayerSymbol) {
+                return true; // Check rows
+            }
+            if (board[0][i] == currentPlayerSymbol && board[1][i] == currentPlayerSymbol && board[2][i] == currentPlayerSymbol) {
+                return true; // Check columns
+            }
+        }
+        if (board[0][0] == currentPlayerSymbol && board[1][1] == currentPlayerSymbol && board[2][2] == currentPlayerSymbol) {
+            return true; // Check diagonal
+        }
+        if (board[0][2] == currentPlayerSymbol && board[1][1] == currentPlayerSymbol && board[2][0] == currentPlayerSymbol) {
+            return true; // Check reverse diagonal
+        }
+        return false;
+    }
+
+    public static boolean isBoardFull() {
+        for (int r = 0; r < 3; r++) {
+            for (int c = 0; c < 3; c++) {
+                if (board[r][c] == ' ') {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static void switchPlayer() {
+        currentPlayerSymbol = (currentPlayerSymbol == 'X') ? 'O' : 'X';
     }
 }
+
