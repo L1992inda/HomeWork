@@ -16,11 +16,11 @@ public class ArrayListExercise4 {
         colors.add("Black");
 
         //fixme
-        //String element = ...;
-        //System.out.println("First element: " + element);
+        String element = colors.get(1);
+        System.out.println("First element: " + element);
 
         //fixme
-        //element = ...;
-        //System.out.println("Third element: " + element);
+        element = colors.get(3);
+        System.out.println("Third element: " + element);
     }
 }

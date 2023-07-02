@@ -1,21 +1,49 @@
 package io.codelex.collections.practice.lists;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class ArrayListExercise11 {
 
     public static void main(String[] args) {
         //TODO: Create an ArrayList with String elements
+        List<String> words = new ArrayList<>();
+        words.add("Red");
+        words.add("Book");
+        words.add("Car");
+        words.add("Door");
+        words.add("Ring");
+        words.add("Phone");
+        words.add("Bird");
+        words.add("Black");
+        words.add("Lion");
+        words.add("Cat");
 
-        //TODO: Add 10 values to list
+        System.out.println("List before changed  elements " + words);
+        System.out.println();
+        words.add(5, "Dog");
+        System.out.println("List after changed 5 element" + words);
+        System.out.println();
+        words.add(words.size()-0, "Zebra");
+        System.out.println("List after changed last element " + words);
+        System.out.println();
+        Collections.sort(words);
+        System.out.println("List after sort: " + words);
+        System.out.println();
 
-        //TODO: Add new value at 5th position
+        if (words.contains("Foobar")) {
+            System.out.println("Found");
+        } else {
+            System.out.println("Not found");
+        }
+        System.out.println();
 
-        //TODO: Change value at last position (Calculate last position programmatically)
+        for (String word : words) {
+            System.out.println(word);
+        }
 
-        //TODO: Sort your list in alphabetical order
 
-        //TODO: Check if your list contains "Foobar" element
-
-        //TODO: Print each element of list using loop
     }
 
 }

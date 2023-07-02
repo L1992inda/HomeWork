@@ -12,18 +12,21 @@ public class Exercise3 {
         mySet.add("Red");
         mySet.add("Black");
         mySet.add("Yellow");
-        //..
+        mySet.add("Pink");
+        mySet.add("Gold");
 
-        System.out.println("Should have 5 elements: " + mySet); //Pay attention on order!
+
+
+        System.out.println("Should have 5 elements: " + mySet);
 
         //TODO: iterate through all elements in set
-        /*
-        for (...) {
-            System.out.println(element);
+
+        for (String set:mySet) {
+            System.out.println(set);
         }
-        */
 
         //TODO: remove all values from set
+        mySet.clear();
         System.out.println("Should be empty: " + mySet);
 
         //TODO: check if it is possible to add duplicated values
@@ -31,6 +34,10 @@ public class Exercise3 {
         mySet.add("Orange");
         mySet.add("Green");
         mySet.add("Purple");
+        mySet.add("Pink");
+        mySet.add("Pink");
+        mySet.add("Gold");
+        mySet.add("Gold");
 
         System.out.println(mySet);
     }
