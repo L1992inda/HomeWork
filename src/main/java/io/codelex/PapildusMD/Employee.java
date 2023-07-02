@@ -1,14 +1,15 @@
 package io.codelex.PapildusMD;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.Period;
 
 public class Employee {
     private String name;
-    private double salary;
+    private BigDecimal salary;
     private LocalDate date;
 
-    public Employee(String name, double salary, LocalDate date) {
+    public Employee(String name, BigDecimal salary, LocalDate date) {
         this.name = name;
         this.salary = salary;
         this.date = date;
@@ -22,11 +23,11 @@ public class Employee {
         this.name = name;
     }
 
-    public double getSalary() {
+    public BigDecimal getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(BigDecimal salary) {
         this.salary = salary;
     }
 

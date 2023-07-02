@@ -23,7 +23,6 @@ public class Weapon {
 
     public void shot() {
         if (catrige.size() > 0) {
-            catrige.get(catrige.size() - 1);
             System.out.println("ShooT!");
             catrige.remove(catrige.size() - 1);
         } else {
