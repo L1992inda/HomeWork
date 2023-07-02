@@ -76,7 +76,7 @@ public class StreamsExerciseTest {
     }
 
     @Test
-    public void shouldReturnFirstNames() {
+   public void shouldReturnFirstNames() {
         List<String> names = asList("Homer Simpson", "Marge Simpson", "Bart Simpson", "Kent Brockman");
         List<String> result = StreamsExercise.getFirstNames(names);
         assertThat(result, equalTo(Arrays.asList("Homer", "Marge", "Bart", "Kent")));

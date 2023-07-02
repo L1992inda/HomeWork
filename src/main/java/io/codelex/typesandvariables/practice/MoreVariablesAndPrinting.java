@@ -2,25 +2,31 @@ package io.codelex.typesandvariables.practice;
 
 public class MoreVariablesAndPrinting {
     public static void main(String[] args) {
-        String myName, myEyes, myTeeth, myHair;
-        int myAge, myHeight, myWeight;
+        String name, eyes, teeth, hair;
+        int age, heightInches, weightLbs;
+        double inchCm, heightToCm, lbsKg, weightToKg;
 
-        myName = "Zed A. Shaw";
-        myAge = 35;
-        myHeight = 74;  // inches
-        myWeight = 180; // lbs
-        myEyes = "Blue";
-        myTeeth = "White";
-        myHair = "Brown";
+        name = "Zed A. Shaw";
+        age = 35;
+        heightInches = 74;
+        weightLbs = 180;
+        eyes = "Blue";
+        teeth = "White";
+        hair = "Brown";
+        inchCm = 2.54f;
+        heightToCm = heightInches * inchCm;
+        lbsKg = 0.453592d;
+        weightToKg = weightLbs * lbsKg;
 
-        System.out.println("Let's talk about " + myName + ".");
-        System.out.println("He's " + myHeight + " inches tall.");
-        System.out.println("He's " + myWeight + " pounds heavy.");
+
+        System.out.println("Let's talk about " + name + ".");
+        System.out.println("He's " + heightToCm + " inches tall.");
+        System.out.println("He's " + weightToKg + " pounds heavy.");
         System.out.println("Actually, that's not too heavy.");
-        System.out.println("He's got " + myEyes + " eyes and " + myHair + " hair.");
-        System.out.println("His teeth are usually " + myTeeth + " depending on the coffee.");
+        System.out.println("He's got " + eyes + " eyes and " + hair + " hair.");
+        System.out.println("His teeth are usually " + teeth + " depending on the coffee.");
 
-        System.out.println("If I add " + myAge + ", " + myHeight + ", and " + myWeight
-                + " I get " + (myAge + myHeight + myWeight) + ".");
+        System.out.println("If I add " + age + ", " + heightToCm + ", and " + weightToKg
+                + " I get " + (age + heightToCm + weightToKg) + ".");
     }
 }
