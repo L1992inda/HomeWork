@@ -32,9 +32,7 @@ public class FuelGauge {
         if (fuel > 0) {
             fuel--;
         } else {
-            {
                 System.out.println("LitresPerKm is empty!");
-            }
         }
     }
 }

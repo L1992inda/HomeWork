@@ -1,19 +1,14 @@
 package io.codelex.classesandobjects.practice;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Movie {
     private String title;
 
     private String studio;
     private String rating;
 
-    public static void main(String[] args) {
-        Movie casinoRoyale = new Movie("Casino Royale", "Eon Productions", "PG13");
-        Movie glass = new Movie("Glass", "Buena Vista International", "PG13");
-        Movie spiderMan = new Movie("Spider-Man: Into the Spider-Verse", "Columbia Pictures", "PG");
-
-//Movie.getPG(Movie[] );
-
-    }
 
     public Movie(String title, String studio, String rating) {
         this.title = title;
@@ -29,16 +24,21 @@ public class Movie {
         this.rating = "PG";
     }
 
-    public static Movie[] getPG(Movie[] film) {
-        Movie[] pg = new Movie[film.length];
-        int x = 0;
+    public String getTitle() {
+        return title;
+    }
 
-        for (int i = 0; i < film.length; i++) {
-            if (film[i].rating.contains("PG")) {
-                pg[x] = film[i];
-                x++;
+    public String getStudio() {
+        return studio;
+    }
+
+    public static Movie[] getPG(Movie[] movies) {
+        List<Movie> pgMovies = new ArrayList<>();
+        for (Movie movie : movies) {
+            if (movie.rating.equals("PG")) {
+                pgMovies.add(movie);
             }
         }
-        return pg;
+        return pgMovies.toArray(new Movie[0]);
     }
 }

@@ -1,6 +1,6 @@
 package io.codelex.classesandobjects.practice;
 
-public class Date_Test {
+public class DateTest {
     public static void main(String[] args) {
         Date date = new Date("May", "Monday", 2023);
         date.setDay("tuesday");

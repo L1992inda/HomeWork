@@ -2,7 +2,7 @@ package io.codelex.arrays.practice;
 
 import java.util.Scanner;
 
-public class My_TicTacToe {
+public class TicTacToe {
 
     private static char[][] board = new char[3][3];
     private static char currentPlayerSymbol = 'X';

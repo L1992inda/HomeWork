@@ -1,6 +1,6 @@
 package io.codelex.classesandobjects.practice;
 
-public class Dog_Test {
+public class DogTest {
 
     public static void main(String[] args) {
         Dog dog1 = new Dog("Max", "male", "Lady", "Rocky");

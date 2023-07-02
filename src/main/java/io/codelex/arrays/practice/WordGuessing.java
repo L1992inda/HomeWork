@@ -3,7 +3,7 @@ package io.codelex.arrays.practice;
 import java.util.Random;
 import java.util.Scanner;
 
-public class word_guessing {
+public class WordGuessing {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);

@@ -7,7 +7,7 @@ public class Odometer {
 
     private int startMileage;
 
-    FuelGauge fuelGauge;
+    private FuelGauge fuelGauge;
 
     public Odometer(int mileage, FuelGauge fuelGauge) {
         this.startMileage = mileage;

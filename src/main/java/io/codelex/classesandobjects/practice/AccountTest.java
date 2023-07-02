@@ -1,6 +1,6 @@
 package io.codelex.classesandobjects.practice;
 
-public class Account_Test {
+public class AccountTest {
     public static void main(String[] args) {
 
 

@@ -3,7 +3,7 @@ package io.codelex.classesandobjects.practice;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class SavingAccount_Test {
+public class SavingAccountTest {
 
     public static void main(String[] args) {
 
