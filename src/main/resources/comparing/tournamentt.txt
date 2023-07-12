@@ -1,0 +1,7 @@
+
+niw;snainrofilaC suoegaruoC;snaksalA cirogellA
+ssol;syeknoD gnitatsaveD;sregdaB gnirehtilB
+ssol;sregdaB gnirehtilB;snainrofilaC suoegaruoC
+niw;snaksalA cirogellA;syeknoD gnitatsaveD
+ward;snainrofilaC suoegaruoC;syeknoD gnitatsaveD
+niw;sregdaB gnirehtilB;snaksalA cirogellA
